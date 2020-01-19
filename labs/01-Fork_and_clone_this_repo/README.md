@@ -12,7 +12,7 @@ The ITS-ICT_Containers repo home page opens:
 
 ![GitHub](img/github_home_not_logged_in.png)
 
-Click on **Fork** button at the top-right of the screen. GitHub asks to authenticate yourself:
+Click on **Fork** button at the top-right of the screen. GitHub asks you to authenticate:
 
 ![GitHub](img/github_login.png)
 
@@ -22,11 +22,14 @@ When you enter as logged-in user, re-click on **Fork** button at the top-right o
 
 When forked the original repo, clone it on your PC.
 
-Move where you w
+In the following command, please make sure to change \<YOUR GITHUB ACCOUNT\> placeolders accordingly:
 
-In the following command, please make sure to change \<YOUR GITHUB ACCOUNT\> placeolder with your actual GitHub account (i.e. mine is denismaggior8)
+- \<YOUR PREFERRED FOLDER\> with the folder you want to clone this repo into
+- \<YOUR GITHUB ACCOUNT\>  with your actual GitHub account (i.e. mine is denismaggior8)
 
 ```
-$ cd 
+$ cd <YOUR PREFERRED FOLDER>
 $ git clone https://github.com/<YOUR GITHUB ACCOUNT>/ITS-ICT_Containers
 ```
+
+If you need some Git help, download [**The Git cheat-sheet**](https://www.atlassian.com/dam/jcr:8132028b-024f-4b6b-953e-e68fcce0c5fa/atlassian-git-cheatsheet.pdf)
