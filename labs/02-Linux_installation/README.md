@@ -36,6 +36,6 @@ Please note that the `vagrant up` command can be used in the future to simply st
 
 Other useful Vagrant commands are:
 
-- `vagrant halt`: stops the VM. You have to run this command in the directory where the Vagrantfile is localed. 
+- `vagrant halt`: stops the VM. You have to run this command in the directory where the Vagrantfile is located. 
 
-- `vagrant destroy`: destrois the VM. You have to run this command in the directory where the Vagrantfile is localed. 
+- `vagrant destroy`: destrois the VM. You have to run this command in the directory where the Vagrantfile is located. 
