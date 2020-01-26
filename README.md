@@ -7,7 +7,10 @@
 
 [01 - Fork and clone this repo](labs/01-Fork_and_clone_this_repo/README.md)
 
-[02 - Linux Installation](labs/02-Linux_Installation/README.md)
+[02 - Linux Installation](labs/02-Linux_installation/README.md)
+
+## Assignments
+
 
 
 ## Appendices
