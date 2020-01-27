@@ -126,7 +126,7 @@ Dependencies resolved.
 ...
 ```
 
-Start docker
+Start Docker
 
 ```console
 $ sudo service docker start
@@ -139,7 +139,7 @@ Add your user into docker group (please change the placeholder \<\<USER\>\> acco
 $ sudo usermod -aG docker <<USER>>> && newgrp docker
 ```
 
-Test the docker installation, an empty reponse is expected
+Test the Docker installation, an empty reponse is expected
 ```console
 $ docker ps
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
@@ -147,8 +147,8 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 
 
 
-## Docker Desktop
+## Windows 10 Professional, newer MacOS releases
 
-Follow the instructions [here](https://www.docker.com/products/docker-desktop). 
+Install Docker Desktop by following the instructions [here](https://www.docker.com/products/docker-desktop). 
 
 Be aware: a DockerHub username must be created
