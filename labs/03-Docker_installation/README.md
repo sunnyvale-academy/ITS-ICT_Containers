@@ -96,6 +96,11 @@ Install the dnf-plugins-core package which provides the commands to manage your 
 
 ```console
 $ sudo dnf -y install dnf-plugins-core
+Last metadata expiration check: 0:30:18 ago on Mon 27 Jan 2020 08:19:27 UTC.
+Package dnf-plugins-core-4.0.9-1.fc31.noarch is already installed.
+Dependencies resolved.
+Nothing to do.
+Complete!
 ```
 
 Use the following command to set up the stable repository.
@@ -105,13 +110,42 @@ Use the following command to set up the stable repository.
 $ sudo dnf config-manager \
     --add-repo \
     https://download.docker.com/linux/fedora/docker-ce.repo
+Adding repo from: https://download.docker.com/linux/fedora/docker-ce.repo
 ```
 
 Install Docker CE
 
 ```console
-$ sudo dnf install docker-ce
+$ sudo dnf -y install docker-ce
+Docker CE Stable - x86_64                                                                                                                                     15 kB/s | 6.6 kB     00:00    
+Fedora Modular 31 - x86_64                                                                                                                                    34 kB/s |  23 kB     00:00    
+Fedora Modular 31 - x86_64 - Updates                                                                                                                          29 kB/s |  22 kB     00:00    
+Fedora 31 - x86_64 - Updates                                                                                                                                  24 kB/s |  23 kB     00:00    
+Fedora 31 - x86_64                                                                                                                                            24 kB/s |  23 kB     00:00    
+Dependencies resolved.
+...
 ```
+
+Start docker
+
+```console
+$ sudo service docker start
+Redirecting to /bin/systemctl start docker.service
+```
+
+Add your user into docker group (please change the placeholder \<\<USER\>\> accordingly)
+
+```console
+$ sudo usermod -aG docker <<USER>>> && newgrp docker
+```
+
+Test the docker installation, an empty reponse is expected
+```console
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+```
+
+
 
 ## Docker Desktop
 
