@@ -11,6 +11,8 @@
 
 [03 - Docker installation](labs/03-Docker_installation/README.md)
 
+[04 - Docker images and containers](labs/04-Docker_images_and_containers/README.md)
+
 ## Assignments
 
 N/A
