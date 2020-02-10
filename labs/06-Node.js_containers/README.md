@@ -2,7 +2,11 @@
 
 ## Prerequisites
 
+
+
 ## Build the image
+
+Build the image **node-web-app:1.0**
 
 ```console
 $ docker build -t node-web-app:1.0 . 
@@ -32,6 +36,8 @@ Successfully built 7c387c3bf891
 Successfully tagged node-web-app:1.0
 ```
 
+Let's see if images have been build/pulled correctly
+
 ```console
 $ docker images | grep node
 node-web-app                                                            1.0                        7c387c3bf891        44 seconds ago      911MB
@@ -40,13 +46,33 @@ node                                                                    10      
 
 ## Run the container
 
+Run the container i daemon mode (-d)
+
 ```console
 $ docker run -p 49160:8080 -d node-web-app:1.0
 53e0ddbbbaaed2fba1870317032529b913933e036af043c55bfe4ff422fc16e5
 ```
 
+Get the container's standard output using `docker logs` command
 
 ```console
-$ curl localhost:49160/          
-Hello World
+$ docker logs 53e0ddbbbaaed2fba1870317032529b913933e036af043c55bfe4ff422fc16e5
+Running on http://0.0.0.0:8080
 ```
+
+Point your browser to the docker host's IP address (in my case localhost), using the port you specified in the as an argument of `docker run` command (49160); you should see the Hello World page.
+
+If you are using a bash terminal, you can use also `curl` command to test the container.
+
+```console
+$ curl -i localhost:49160/          
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: text/html; charset=utf-8
+Content-Length: 11
+ETag: W/"b-Ck1VqNd45QIvq3AZd8XYQLvEhtA"
+Date: Sun, 09 Feb 2020 15:49:07 GMT
+Connection: keep-alive
+
+Hello World```
+

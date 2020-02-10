@@ -13,9 +13,13 @@
 
 [04 - Docker images and containers](labs/04-Docker_images_and_containers/README.md)
 
+[05 - .NET Core containers](labs/05-.NET_Core_containers/README.md)
+
+[06 - Node.js containers](labs/06-Node.js_containers/README.md)
+
 ## Assignments
 
-N/A
+[01 - ](labs/04-Docker_images_and_containers/README.md)
 
 ## Appendices
 
