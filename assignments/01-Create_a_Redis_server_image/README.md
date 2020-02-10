@@ -7,7 +7,7 @@ Redis is an open source (BSD licensed), in-memory data structure store, used as 
 - Your Redis image must be based on **ubuntu:latest** image
 - Your build process has to copy the provided **redis.conf** file into the image's /etc/redis/ folder (overwiring the default config file)
 - Redis server will listen for connections on port **6380/tcp**.
-- On ubuntu, you can install Redis server with the command: `apt update && apt install -y redis-server`
+- On ubuntu, you can install Redis server with the commands: `apt update && apt install -y redis-server`
 - The Redis command, used to start the container, is `redis-server /etc/redis/redis.conf`
 - The Redis server must be run as **redis** user
 - The Redis image have to be labelled with MANTAINER="your name and surname"
