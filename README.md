@@ -19,7 +19,7 @@
 
 ## Assignments
 
-[01 - ](labs/04-Docker_images_and_containers/README.md)
+[01 - Create a Redis server image ](assignements/01-Create_a_Redis_server_image/README.md)
 
 ## Appendices
 
