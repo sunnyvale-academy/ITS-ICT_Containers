@@ -40,7 +40,7 @@ Copyright (C) Microsoft Corporation. All rights reserved.
 Let's build a .NET Core-based image with your application packed within.
 
 ```console
-$ docker build -t myimage -f Dockerfile .
+$ docker build -t net-image:1.0 -f Dockerfile .
 Sending build context to Docker daemon  654.3kB
 Step 1/3 : FROM mcr.microsoft.com/dotnet/core/runtime:3.1
 3.1: Pulling from dotnet/core/runtime
