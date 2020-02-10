@@ -41,12 +41,12 @@ To test the container, enter into it with a bash command
 
 ```console
 $ docker exec -ti 3fb8ff93a165c77af8d7aeabcc1a781e50484be461440bc05faa8295678112b4 /bin/bash
-redis@3fb8ff93a165:/# redis-cli 
-127.0.0.1:6379> set messaggio ciao
+redis@3fb8ff93a165:/# redis-cli -p 6380 
+127.0.0.1:6380> set messaggio ciao
 OK
-127.0.0.1:6379> get messaggio
+127.0.0.1:6380> get messaggio
 "ciao"
-127.0.0.1:6379> exit
+127.0.0.1:6380> exit
 ```
 
 ## Cleanup
