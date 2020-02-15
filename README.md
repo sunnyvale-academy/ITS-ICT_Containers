@@ -17,6 +17,8 @@
 
 [06 - Node.js containers](labs/06-Node.js_containers/README.md)
 
+[07 - Java containers](labs/07-Java_containers/README.md)
+
 ## Assignments
 
 [01 - Create a Redis server image ](assignements/01-Create_a_Redis_server_image/README.md)
