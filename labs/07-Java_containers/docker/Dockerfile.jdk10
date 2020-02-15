@@ -1,0 +1,7 @@
+FROM ubuntu:latest
+RUN  apt-get update
+RUN  apt-get --assume-yes install wget
+RUN  wget https://download.java.net/java/GA/jdk10/10/binaries/openjdk-10_linux-x64_bin.tar.gz
+RUN  tar -zxvf openjdk-10_linux-x64_bin.tar.gz
+COPY java/DockerTest.class /
+CMD  /jdk-10/bin/java ${JAVA_OPT} DockerTest ${APP_OPT}

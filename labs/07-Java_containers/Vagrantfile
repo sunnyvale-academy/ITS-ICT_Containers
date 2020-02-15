@@ -1,0 +1,44 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# README
+#
+# Getting Started:
+# 1. vagrant plugin install vagrant-hostmanager
+# 2. vagrant up
+# 3. vagrant ssh
+#
+# This should put you at the control host
+#  with access, by name, to other vms
+Vagrant.configure(2) do |config|
+  config.hostmanager.enabled = true
+  config.vm.box = "ubuntu/xenial64"
+  #config.hostmanager.manage_host = true
+  #config.vm.synced_folder ".", "/vagrant", type: "nfs"
+
+  config.vm.define "docker" do |h|
+    h.vm.provider :virtualbox do |vb|
+        vb.name = "docker"
+	    vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+        vb.memory = 1024
+        vb.cpus = 2
+    end
+    h.vm.network "private_network", ip: "192.168.135.131"
+    h.vm.provision "shell", inline: "mkdir -p $HOME/java"
+    h.vm.provision "file", source: "./java/DockerTest.java", destination: "$HOME/java/DockerTest.java"
+    h.vm.provision "shell", path: "scripts/install_docker.sh"
+    h.vm.provision "shell", path: "scripts/install_java.sh"
+    h.vm.provision "shell", path: "scripts/compile_java.sh"
+    h.vm.provision "shell", inline: "mkdir -p $HOME/docker"
+    h.vm.provision "file", source: "./docker/Dockerfile.jdk8", destination: "$HOME/docker/Dockerfile.jdk8"
+    h.vm.provision "file", source: "./docker/Dockerfile.jdk9", destination: "$HOME/docker/Dockerfile.jdk9"
+    h.vm.provision "file", source: "./docker/Dockerfile.jdk10", destination: "$HOME/docker/Dockerfile.jdk10"
+    h.vm.provision "docker" do |d|
+      d.build_image "/home/vagrant", args: "-f /home/vagrant/docker/Dockerfile.jdk8 -t docker-test:jdk8"
+      d.build_image "/home/vagrant", args: "-f /home/vagrant/docker/Dockerfile.jdk9 -t docker-test:jdk9"
+      d.build_image "/home/vagrant", args: "-f /home/vagrant/docker/Dockerfile.jdk10 -t docker-test:jdk10"
+    end
+    h.vm.hostname = "docker"
+  end
+
+end
