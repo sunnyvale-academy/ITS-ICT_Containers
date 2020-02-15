@@ -1,8 +1,6 @@
 
 # Java containers
 
-
-
 ## Prerequisites:
 
 - Having installed [Java SE 13](https://www.oracle.com/java/technologies/javase-jdk13-downloads.html)
@@ -32,7 +30,7 @@ $ javac -nowarn -source 8 -target 8 java/DockerTest.java
 
 ```
 
-### Java 8 experiment
+## Java 8 experiment
 
 At first we create a **docker-test:jdk8** Docker image, containing JDK 8 and our Java Class we are using as the container's entry point.
 
@@ -88,7 +86,7 @@ System properties
 Cores       : 2
 Memory (Max): 444
 ```
-Here the -c 512 sets the CPU Shares to 512, which advises using half of the available CPU time. And the -m 512MB limits the memory to given number. As expected, these arguments are not working in this Java version.
+Here the -c 512 sets the CPU Shares to 512, which advises using half of the available CPUs. And the -m 512MB limits the memory to given number. As expected, these arguments are not working in this Java version.
 
 However, Java 8 update 151 has the CPU Sets improvement. This time let’s try with setting the --cpuset-cpus to a single core.
 
@@ -120,7 +118,7 @@ Memory (Max): 123
 ```
 With the help of this option, finally, 123MB of heap space is allocated, which perfectly makes sense for the upper limit of 512MB.
 
-### Java 9 experiment
+## Java 9 experiment
 
 Let's build an image containing the JDK 9
 
@@ -157,7 +155,7 @@ Memory (Max): 123
 
 As expected, Java 9 recognized the CPU Sets and the memory limits when -XX:+UseCGroupMemoryLimitForHeap is used.
 
-### Java 10 experiment
+## Java 10 experiment
 
 
 Now build an image containing the JDK 10
@@ -205,7 +203,7 @@ Cores       : 1
 Memory (Max): 123
 ```
 
-It’s working as expected. Also, it’s worth to see this feature can be disabled via the -XX:-UseContainerSupport option (note that it starts with - after the -XX: prefix):
+It’s working as expected. Also, it’s worth to see that this feature can be disabled via the -XX:-UseContainerSupport option (note that it starts with - after the -XX: prefix):
 
 ```
 $ docker run \
