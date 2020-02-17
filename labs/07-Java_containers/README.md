@@ -3,6 +3,7 @@
 
 ## Prerequisites:
 
+### If building the sourcecode using a local Java installation
 - Having installed [Java SE 13](https://www.oracle.com/java/technologies/javase-jdk13-downloads.html)
 - $JAVA_HOME/bin must be set in $PATH
 
@@ -25,9 +26,16 @@ Before starting the lab, inspect the [Java class](java/DockerTest.java) we are u
 
 Let's compile the Java class targetting the JDK 8
 
+Using the local JDK
+
 ```console
 $ javac -nowarn -source 8 -target 8 java/DockerTest.java 
+```
 
+Or using a Docker container
+
+```console
+$ docker run -v $(pwd)/java:/java openjdk:8u151 javac -nowarn -source 8 -target 8 /java/DockerTest.java 
 ```
 
 ## Java 8 experiment
