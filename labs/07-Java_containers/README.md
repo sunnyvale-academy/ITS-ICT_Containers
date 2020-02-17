@@ -35,7 +35,7 @@ $ javac -nowarn -source 8 -target 8 java/DockerTest.java
 Or using a Docker container
 
 ```console
-$ docker run -v $(pwd)/java:/java openjdk:8u151 javac -nowarn -source 8 -target 8 /java/DockerTest.java 
+$ docker run --rm -v $(pwd)/java:/java openjdk:8u151 javac -nowarn -source 8 -target 8 /java/DockerTest.java 
 ```
 
 ## Java 8 experiment
