@@ -1,8 +1,6 @@
 
 ## Multi-network wordpress installation
 
-
-
 **Task 1)** Create two different networks called **frontend** and **backend**
 
 **Task 2)** Run the MySQL (database) container attached to the backend network

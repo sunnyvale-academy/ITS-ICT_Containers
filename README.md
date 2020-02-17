@@ -25,6 +25,8 @@
 
 [01 - Create a Redis server image ](assignments/01-Create_a_Redis_server_image/README.md)
 
+[02 - Multi-network Wordpress installation ](assignments/02-Multi-network_wordpress_installation/README.md)
+
 ## Appendices
 
 [A - Sync a local copy of forked repo](appendices/A-Sync_copy_of_forked_repo/README.md)
