@@ -17,9 +17,13 @@
 
 [06 - Node.js containers](labs/06-Node.js_containers/README.md)
 
-[07 - Java containers](labs/07-Java_containers/README.md)
+[07 - Java containers](labs/07-Java_contain ers/README.md)
 
 [08 - Docker networking](labs/08-Docker_networking/README.md)
+
+[09 - Containers ports](labs/09-Containers_ports/README.md)
+
+[10 - FS layering](labs/10-FS_layering/README.md)
 
 ## Assignments
 

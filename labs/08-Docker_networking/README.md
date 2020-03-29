@@ -68,7 +68,7 @@ ping: sendto: Network is unreachable
 Before testing the bridge network model, list the Docker networks created by default.
 
 ```console
-$ $ docker network ls
+$ docker network ls
 NETWORK ID          NAME                DRIVER              SCOPE
 8c46c98fe79a        bridge              bridge              local
 3a6f3fe18c4f        host                host                local
