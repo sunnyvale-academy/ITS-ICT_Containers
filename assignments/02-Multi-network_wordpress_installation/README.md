@@ -10,7 +10,7 @@ If you want to connect a container with multiple networks, after having created 
 
 ```console
 $ docker run \
-    --name wordpress \
+    --name mysql \
     -e MYSQL_ROOT_PASSWORD=somewordpress \
     -e MYSQL_DATABASE=wordpress \
     -e MYSQL_USER=wordpress \
