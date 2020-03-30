@@ -31,6 +31,8 @@
 
 [02 - Multi-network Wordpress installation ](assignments/02-Multi-network_wordpress_installation/README.md)
 
+[03 - Manage backups using volumes](assignments/03-03-Manage_backups_using_volumes/README.md)
+
 ## Appendices
 
 [A - Sync a local copy of forked repo](appendices/A-Sync_copy_of_forked_repo/README.md)
