@@ -25,6 +25,12 @@
 
 [10 - FS layering](labs/10-FS_layering/README.md)
 
+[11 - Volumes](labs/11-Volumes/README.md)
+
+[12 - Bind mounts](labs/12-Bind_mounts/README.md)
+
+[13 - TMPFS mounts](labs/13-TMPFS_mounts/README.md)
+
 ## Assignments
 
 [01 - Create a Redis server image ](assignments/01-Create_a_Redis_server_image/README.md)
