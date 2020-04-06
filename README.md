@@ -37,7 +37,7 @@
 
 [02 - Multi-network Wordpress installation ](assignments/02-Multi-network_wordpress_installation/README.md)
 
-[03 - Manage backups using volumes](assignments/03-03-Manage_backups_using_volumes/README.md)
+[03 - Manage backups using volumes](assignments/03-Manage_backups_using_volumes/README.md)
 
 ## Appendices
 
