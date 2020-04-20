@@ -20,6 +20,8 @@ $ docker run \
     mysql:5.7
 ```
 
+**-d** runs your container in background
+
 **Task 3)** Run the Workdpress container attached to the frontend network 
 
 __BE AWARE__, when you run a container, the `docker run` command supports only ONE `--net` flag. 
@@ -37,6 +39,8 @@ $ docker run \
     --net frontend \
     wordpress
 ```
+
+**-d** runs your container in background
 
 The two containers do not communicate to each other since they are on different networks.
 
