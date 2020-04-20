@@ -36,7 +36,7 @@ $ docker run \
     --mount source=db-vol,target=/var/lib/mysql,readonly \
     --mount type=bind,source=$(pwd),target=/backups \
     busybox:latest \
-    tar czvf mysql_datafiles.tar.gz /var/lib/mysql
+    tar czvf /backups/mysql_datafiles.tar.gz /var/lib/mysql
 ```
 
 List the backup file on local machine
