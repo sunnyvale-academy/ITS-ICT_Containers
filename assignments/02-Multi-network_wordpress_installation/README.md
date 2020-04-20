@@ -16,6 +16,7 @@ $ docker run \
     -e MYSQL_USER=wordpress \
     -e MYSQL_PASSWORD=wordpress \
     --net backend \
+    -d \
     mysql:5.7
 ```
 
