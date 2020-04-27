@@ -31,6 +31,10 @@
 
 [13 - TMPFS mounts](labs/13-TMPFS_mounts/README.md)
 
+[14 - Docker Swarm](labs/14-Docker_Swarm/README.md)
+
+[15 - Overlay networks](labs/15-Overlay_networks/README.md)
+
 ## Assignments
 
 [01 - Create a Redis server image ](assignments/01-Create_a_Redis_server_image/README.md)
