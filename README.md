@@ -35,6 +35,12 @@
 
 [15 - Overlay networks](labs/15-Overlay_networks/README.md)
 
+[16 - YAML](labs/16-YAML/README.md)
+
+[17 - Docker Compose](labs/17-Docker_Compose/README.md)
+
+
+
 ## Assignments
 
 [01 - Create a Redis server image ](assignments/01-Create_a_Redis_server_image/README.md)
