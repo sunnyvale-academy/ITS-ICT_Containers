@@ -4,5 +4,24 @@ services:
     build: .
     ports:
       - "5000:5000"
+    networks: 
+      - frontend
+      - backend
+    depends_on: 
+      - redis
+    restart: always
+    environment: 
+      MYVAR: "myvalue"
+    env_file: .env
   redis:
     image: "redis:alpine"
+    networks: 
+      - backend
+    restart: always
+    volumes: 
+      - dbdata:/var/dbdata
+networks:
+  frontend:
+  backend:
+volumes:
+     dbdata:
