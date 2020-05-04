@@ -8,4 +8,4 @@ A text editor
 
 Model the following UML class diagram using YAML syntax
 
-![UML](img/UML.png)
+![UML](img/uml.png) 
