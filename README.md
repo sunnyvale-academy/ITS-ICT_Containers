@@ -37,7 +37,7 @@
 
 [16 - YAML](labs/16-YAML/README.md)
 
-[17 - Docker Compose](labs/17-Docker_Compose/README.md)
+[17 - Docker Compose](labs/17-Docker_compose/README.md)
 
 
 
