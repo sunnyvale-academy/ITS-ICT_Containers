@@ -49,6 +49,8 @@
 
 [03 - Manage backups using volumes](assignments/03-Manage_backups_using_volumes/README.md)
 
+[04 - Multi-container application with Docker Compose](assignments/04-Multicontainer_application_with_Docker_Compose/README.md)
+
 ## Appendices
 
 [A - Sync a local copy of forked repo](appendices/A-Sync_copy_of_forked_repo/README.md)
