@@ -1,4 +1,4 @@
-# MiniKube
+# Minikube
 
 ## Prerequisites:
 

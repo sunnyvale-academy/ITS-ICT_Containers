@@ -1,6 +1,9 @@
 # Kubernetes multi-node cluster with Vagrant + Virtualbox + Kubeadm
 
-Virtualbox + Vagrant + kubectl have to be installed on the host machine as a prerequisite (see [00-Prerequisites](../00-Prerequisites/README.md))
+- Virtualbox + Vagrant + kubectl have to be installed on the host machine as a prerequisite (see [00-Prerequisites](../00-Prerequisites/README.md))
+
+- Download and install **kubectl**
+ from https://kubernetes.io/docs/tasks/tools/install-kubectl/ 
 
 All the istructions here after have to be run on the host machine.
 
