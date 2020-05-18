@@ -41,7 +41,7 @@
 
 [18 - Kubernetes](labs/18-Kubernetes/README.md)
 
-[19 - K8S_Pod](labs/18-Kubernetes/README.md)
+[19 - K8S Pod](labs/K8S_Pod/README.md)
 
 
 ## Assignments
