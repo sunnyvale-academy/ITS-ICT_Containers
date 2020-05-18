@@ -39,6 +39,9 @@
 
 [17 - Docker Compose](labs/17-Docker_compose/README.md)
 
+[18 - Kubernetes](labs/18-Kubernetes/README.md)
+
+[19 - K8S_Pod](labs/18-Kubernetes/README.md)
 
 
 ## Assignments
