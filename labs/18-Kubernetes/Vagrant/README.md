@@ -17,14 +17,14 @@ $ vagrant plugin install vagrant-hostmanager
 Provision the environent
 
 ```console
-vagrant$ vagrant up
+$ vagrant up
 ```
 
 Test the environment
 
 ```console
-vagrant$ export KUBECONFIG=kubeconfig.yaml
-vagrant$ kubectl get nodes
+$ export KUBECONFIG=kubeconfig.yaml
+$ kubectl get nodes
 
 NAME     STATUS   ROLES    AGE   VERSION
 master   Ready    master   18h   v1.15.3
