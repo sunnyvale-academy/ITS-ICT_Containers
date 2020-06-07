@@ -41,7 +41,13 @@
 
 [18 - Kubernetes](labs/18-Kubernetes/README.md)
 
-[19 - K8S Pod](labs/19-K8S_Pod/README.md)
+[19 - Pod](labs/19-Pod/README.md)
+
+[20 - ReplicationController](labs/20-ReplicationController/README.md)
+
+[21 - ReplicaSet](labs/21-ReplicaSet/README.md)
+
+[22 - Deployment](labs/22-Deployment/README.md)
 
 
 ## Assignments
@@ -53,6 +59,8 @@
 [03 - Manage backups using volumes](assignments/03-Manage_backups_using_volumes/README.md)
 
 [04 - Multi-container application with Docker Compose](assignments/04-Multicontainer_application_with_Docker_Compose/README.md)
+
+[05 - Kubernetes Deployment](assignments/05-Kubernetes_Deployment/README.md)
 
 ## Appendices
 
