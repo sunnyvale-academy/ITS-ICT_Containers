@@ -61,3 +61,10 @@ frontend-r72q9   1/1     Running   0          8m41s
 frontend-zdpgw   1/1     Running   0          8m41s
 ```
 
+Remove the RS
+
+```console
+$ kubectl delete -f  frontend-rs.yaml
+replicaset.apps "frontend" deleted
+```
+
