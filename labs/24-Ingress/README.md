@@ -122,18 +122,18 @@ Based on the routing defined into the `traefik-ingress.yaml`file, we should get 
 Be aware that you have to use the NodePort showed by the `kubectl describe svc traefik-ingress-service` command.
 
 ```console
-$ curl -H "Host: 192-168-26-11.nip.io" http://192-168-26-11.nip.io:30592/whoami 
+$ curl -H "Host: 127-0-0-1.nip.io" http://127-0-0-1.nip.io:30605/whoami 
 Hostname: whoami-deployment-547545f65d-zjbgf
 IP: 127.0.0.1
 IP: 10.244.1.42
 RemoteAddr: 10.244.1.41:38634
 GET /whoami HTTP/1.1
-Host: 192-168-26-11.nip.io
+Host: 127-0-0-1.nip.io
 User-Agent: curl/7.45.0
 Accept: */*
 Accept-Encoding: gzip
 X-Forwarded-For: 10.244.1.1
-X-Forwarded-Host: 192-168-26-11.nip.io
+X-Forwarded-Host: 127-0-0-1.nip.io
 X-Forwarded-Port: 80
 X-Forwarded-Proto: http
 X-Forwarded-Server: traefik-ingress-5f65985cc7-h4nsj
@@ -143,7 +143,7 @@ X-Real-Ip: 10.244.1.1
 This was the whoami home page.
 
 ```console
-$ curl -H "Host: 192-168-26-11.nip.io" http://192-168-26-11.nip.io:30592/                                                                      
+$ curl -H "Host: 127-0-0-1.nip.io" http://127-0-0-1.nip.io:30605/                                                                      
 <!DOCTYPE html>
 <html>
 <head>

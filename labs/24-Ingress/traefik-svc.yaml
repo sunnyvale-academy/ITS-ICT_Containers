@@ -10,5 +10,5 @@ spec:
     - protocol: TCP
       port: 80
       name: web
-      nodePort: 30592
+      nodePort: 30605
   type: NodePort
