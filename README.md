@@ -49,6 +49,10 @@
 
 [22 - Deployment](labs/22-Deployment/README.md)
 
+[23 - Service](labs/23-Service/README.md)
+
+[24 - Ingress](labs/24-Ingress/README.md)
+
 
 ## Assignments
 
