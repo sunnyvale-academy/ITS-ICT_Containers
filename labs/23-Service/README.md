@@ -100,7 +100,7 @@ Your service has been created
 ```console
 $ kubectl get services 
 clusterip-service   ClusterIP   10.110.67.72    <none>        8080/TCP         16s     app=nginx
-nodeport-service    NodePort    10.107.54.251   <none>        8080:30100/TCP   8s      app=nginx
+nodeport-service    NodePort    10.107.54.251   <none>        8080:31879/TCP   8s      app=nginx
 ```
 
 ```console
@@ -115,7 +115,7 @@ Type:                     NodePort
 IP:                       10.107.54.251
 Port:                     http  8080/TCP
 TargetPort:               80/TCP
-NodePort:                 http  30100/TCP
+NodePort:                 http  31879/TCP
 Endpoints:                10.244.1.26:80,10.244.2.25:80
 Session Affinity:         None
 External Traffic Policy:  Cluster
@@ -124,8 +124,10 @@ Events:                   <none>
 
 The following command is meant to try access the service by pointing to a worker's ip address and port 30100. You can just copy & paste IP:PORT in your browser to achieve the same.
 
+**In the command below, use localhost ONLY if you are using the Docker Desktop Kubernetes cluster, if not just use the IP address of one Kubernetes node**
+
 ```console
-$ curl 192.168.26.11:30100
+$ curl localhost:31879
 <!DOCTYPE html>
 <html>
 <head>
@@ -155,64 +157,6 @@ Commercial support is available at
 
 Of course if you point to the other worker the result is the same (since Pod replica is 2 and we expect to find 1 Pod per node)
 
-Now, let's try to scale down nginx deployment to 1 replica:
-
-```console
-$ kubectl scale --replicas=1 deployment/nginx-deployment
-deployment.extensions/nginx-deployment scaled
-```
-
-Now the single Pod instance is scheduled on **node2**
-
-```console
-$ kubectl get pods -o wide  
-NAME                                READY   STATUS    RESTARTS   AGE   IP            NODE    NOMINATED NODE   READINESS GATES
-nginx-deployment-68c7f5464c-lqdsb   1/1     Running   0          68m   10.244.2.25   node2   <none>           <none>
-```
-
-Let's find all the node ip addresses
-
-```console
-$ kubectl get nodes -o wide 
-NAME     STATUS   ROLES    AGE     VERSION   INTERNAL-IP     EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION      CONTAINER-RUNTIME
-master   Ready    master   7d      v1.15.3   192.168.26.10   <none>        Ubuntu 16.04.6 LTS   4.4.0-146-generic   docker://18.9.7
-node1    Ready    <none>   6d23h   v1.15.3   192.168.26.11   <none>        Ubuntu 16.04.6 LTS   4.4.0-161-generic   docker://18.9.7
-node2    Ready    <none>   6d23h   v1.15.3   192.168.26.12   <none>        Ubuntu 16.04.6 LTS   4.4.0-146-generic   docker://18.9.7
-```
-
-What if we try to access the port 30100 poiting to the node where the Pod IS NOT scheduled?
-
-```console
-$ curl 192.168.26.11:30100
-<!DOCTYPE html>
-<html>
-<head>
-<title>Welcome to nginx!</title>
-<style>
-    body {
-        width: 35em;
-        margin: 0 auto;
-        font-family: Tahoma, Verdana, Arial, sans-serif;
-    }
-</style>
-</head>
-<body>
-<h1>Welcome to nginx!</h1>
-<p>If you see this page, the nginx web server is successfully installed and
-working. Further configuration is required.</p>
-
-<p>For online documentation and support please refer to
-<a href="http://nginx.org/">nginx.org</a>.<br/>
-Commercial support is available at
-<a href="http://nginx.com/">nginx.com</a>.</p>
-
-<p><em>Thank you for using nginx.</em></p>
-</body>
-</html>
-```
-
-If you point to the **node1** 30100 port the service still responds, even if the single Pod has been scheduled on **node2**, why? 
-Because with **NodePort** services, a port is opened on every worker node, even if there's no Pod scheduled on it. The internal Kubernetes SDN routes the request to the Pod instance, wherever it is.
 
 ## LoadBalancer
 
