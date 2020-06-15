@@ -66,6 +66,8 @@
 
 [05 - Kubernetes Deployment](assignments/05-Kubernetes_Deployment/README.md)
 
+[06 - Expose Deployments using Services](assignments06-Expose_Deployments_using_Services)
+
 ## Appendices
 
 [A - Sync a local copy of forked repo](appendices/A-Sync_copy_of_forked_repo/README.md)
