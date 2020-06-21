@@ -68,6 +68,9 @@
 
 [06 - Expose Deployments using Services](assignments/06-Expose_Deployments_using_Services)
 
+[07 - Expose Deployment using Ingress](assignments/07-Expose_Deployment_using_Ingress)
+
+
 ## Appendices
 
 [A - Sync a local copy of forked repo](appendices/A-Sync_copy_of_forked_repo/README.md)

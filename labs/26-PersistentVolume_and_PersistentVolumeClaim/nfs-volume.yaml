@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: nfsvol 
+  labels:
+    storage-type: nfs
+spec:
+#  storageClassName: generic
+  capacity:
+    storage: 5Gi 
+  accessModes:
+  - ReadWriteMany 
+  nfs: 
+    path: /export
+    server: nfs-server
+  persistentVolumeReclaimPolicy: Retain 
