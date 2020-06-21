@@ -53,6 +53,12 @@
 
 [24 - Ingress](labs/24-Ingress/README.md)
 
+[25 - Volume](labs/25-Volume/README.md)
+
+[26 - PersistentVolume and PersistentVolumeClaim](labs/26-PersistentVolume_and_PersistentVolumeClaim/README.md)
+
+[27 - StorageClass](labs/27-StorageClass/README.md) 
+
 
 ## Assignments
 
