@@ -66,7 +66,7 @@
 
 [05 - Kubernetes Deployment](assignments/05-Kubernetes_Deployment/README.md)
 
-[06 - Expose Deployments using Services](assignments06-Expose_Deployments_using_Services)
+[06 - Expose Deployments using Services](assignments/06-Expose_Deployments_using_Services)
 
 ## Appendices
 
