@@ -72,9 +72,11 @@
 
 [05 - Kubernetes Deployment](assignments/05-Kubernetes_Deployment/README.md)
 
-[06 - Expose Deployments using Services](assignments/06-Expose_Deployments_using_Services)
+[06 - Expose Deployments using Services](assignments/06-Expose_Deployments_using_Services/README.md)
 
-[07 - Expose Deployment using Ingress](assignments/07-Expose_Deployment_using_Ingress)
+[07 - Expose Deployment using Ingress](assignments/07-Expose_Deployment_using_Ingress/README.md)
+
+[08 - Use StorageClass](assignments/08-Use_StorageClass/README.md)
 
 
 ## Appendices
