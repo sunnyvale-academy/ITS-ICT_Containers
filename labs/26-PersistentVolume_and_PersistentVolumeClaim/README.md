@@ -40,7 +40,7 @@ Now verify if the PVC is marked as **Bound**
 ```console
 $ kubectl get pvc -o wide
 NAME      STATUS   VOLUME   CAPACITY   ACCESS MODES   STORAGECLASS   AGE   VOLUMEMODE
-nfs-pvc   Bound    nfsvol   5Gi        RWX                           18s   Filesystem
+nfs-pvc   Bound    nfsvol   5Gi        RWX            manual         44s   Filesystem
 ```
 
 The Pod we are going to create is made of an nginx container that mounts the volume to use it as a document root

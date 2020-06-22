@@ -5,7 +5,7 @@ metadata:
   labels:
     storage-type: nfs
 spec:
-#  storageClassName: generic
+  storageClassName: manual
   capacity:
     storage: 5Gi 
   accessModes:
