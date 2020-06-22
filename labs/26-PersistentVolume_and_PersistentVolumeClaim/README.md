@@ -72,9 +72,10 @@ Verify if all the busybox pod replicas have been created correctly, also they sh
 ```console
 $ kubectl get pods -o wide
 NAME                                      READY   STATUS    RESTARTS   AGE    IP            NODE    NOMINATED NODE   READINESS GATES
-busybox-nfs-deployment-649f7cd75d-cmmt6   1/1     Running   0          4m9s   10.244.1.7    node1   <none>           <none>
-busybox-nfs-deployment-649f7cd75d-frvrz   1/1     Running   0          4m9s   10.244.2.10   node2   <none>           <none>
-nginx-nfs-pod                             1/1     Running   0          15m    10.244.1.6    node1   <none>           <none>
+busybox-nfs-deployment-7f748f7b9c-2kgs4   1/1     Running   0          95s    10.1.0.114   docker-desktop   <none>           <none>
+busybox-nfs-deployment-7f748f7b9c-5zk5r   1/1     Running   0          95s    10.1.0.115   docker-desktop   <none>           <none>
+nfs-server-848cb6f6fc-rj9mz               1/1     Running   0          14m    10.1.0.112   docker-desktop   <none>           <none>
+nginx-nfs-pod                             1/1     Running   0          4m9s   10.1.0.113   docker-desktop   <none>           <none>
 ```
 
 If you point your browser [here](http://localhost:30100) and keep refreshing the window, you should see that every 5 seconds a new entry is appended at the bottom of the page. An entry is made of the pod's hostname and a timestamp. 
