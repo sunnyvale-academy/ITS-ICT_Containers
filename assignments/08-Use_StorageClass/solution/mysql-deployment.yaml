@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql-deployment
+  labels:
+    name: mysql-deployment
+spec:
+  selector:
+    matchLabels:
+     app: mysql-pod
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: mysql-pod
+    spec:
+      containers:
+      - name: mysql
+        image: mysql:5.6
+        ports:
+          - containerPort: 3306
+        env:
+          - name: MYSQL_ROOT_PASSWORD
+            value: "wordpress"
+          - name: MYSQL_DATABASE
+            value: "wordpress"
+          - name: MYSQL_USER
+            value: "wordpress"
+          - name: MYSQL_PASSWORD
+            value: "wordpress"
+        volumeMounts:
+          - name: mysql-volume
+            mountPath: "/var/lib/mysql"
+      volumes:
+        - name: mysql-volume
+          persistentVolumeClaim:
+              claimName: mysql-pvc 
+        
