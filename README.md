@@ -59,6 +59,17 @@
 
 [27 - StorageClass](labs/27-StorageClass/README.md) 
 
+[28 - ConfigMap](labs/28-ConfigMap/README.md) 
+
+[29 - Secret](labs/29-Secret/README.md) 
+
+[30 - StatefulSet](labs/30-StatefulSet/README.md) 
+
+[31 - Job](labs/31-Job/README.md) 
+
+[32 - DaemonSet](labs/30-DaemonSet/README.md) 
+
+
 
 ## Assignments
 
