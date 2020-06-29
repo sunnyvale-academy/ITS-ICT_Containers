@@ -78,6 +78,10 @@
 
 [08 - Use StorageClass](assignments/08-Use_StorageClass/README.md)
 
+[09 - Configure Redis using a ConfigMap](assignments/09-Configure_Redis_using_a_ConfigMap/README.md)
+
+
+
 
 ## Appendices
 
