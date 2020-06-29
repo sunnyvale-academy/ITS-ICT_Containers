@@ -67,7 +67,7 @@
 
 [31 - Job](labs/31-Job/README.md) 
 
-[32 - DaemonSet](labs/30-DaemonSet/README.md) 
+[32 - DaemonSet](labs/32-DaemonSet/README.md) 
 
 
 
