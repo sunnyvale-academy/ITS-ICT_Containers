@@ -4,6 +4,10 @@ metadata:
   name: traefik-ingress
   namespace: default
 spec:
+  # Default Backend is implementation specific, may not work using Traefik
+  backend:
+    serviceName: wordpress-service
+    servicePort: http
   rules:
   - host: "*.nip.io"
     http:
