@@ -14,7 +14,7 @@ service/metrics-server   ClusterIP   10.102.187.108   <none>        443/TCP     
 In the case you need to reinstall metric server:
 
 ```console
-$ kubectl delete -f ../02-Multi-node_cluster/vagrant/metrics-server/deploy/1.8+/ && kubectl apply -f ../02-Multi-node_cluster/vagrant/metrics-server/deploy/1.8+/
+$ kubectl delete -f metrics-server/deploy/1.8+/ && kubectl apply -f metrics-server/deploy/1.8+/
 clusterrole.rbac.authorization.k8s.io "system:aggregated-metrics-reader" deleted
 clusterrolebinding.rbac.authorization.k8s.io "metrics-server:system:auth-delegator" deleted
 rolebinding.rbac.authorization.k8s.io "metrics-server-auth-reader" deleted

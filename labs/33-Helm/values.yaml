@@ -11,8 +11,8 @@ cp-zookeeper:
   servers: 3
   persistence:
     enabled: true
-    dataDirStorageClass: "nfs-dynamic"
-    dataLogDirStorageClass: "nfs-dynamic"
+    dataDirStorageClass: "hostpath"
+    dataLogDirStorageClass: "hostpath"
     dataDirSize: 0.1Gi
     dataLogDirSize: 0.1Gi
 cp-ksql-server:
@@ -25,7 +25,7 @@ cp-kafka:
   brokers: 3
   persistence:
     enabled: true
-    storageClass: "nfs-dynamic"
+    storageClass: "hostpath"
     size: 0.1Gi
 cp-control-center:
   enabled: false
