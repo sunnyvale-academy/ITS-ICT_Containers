@@ -71,15 +71,10 @@
 
 [33 - Helm](labs/33-Helm/README.md) 
 
-[34 - Namespaces](labs/34-Namespaces/README.md) 
+[34 - Requests_and_limits](labs/34-Requests_and_limits/README.md) 
 
-[35 - Requests_and_limits](labs/35-Requests_and_limits/README.md) 
+[35 - Operator framework](labs/35-Operator_framework/README.md) 
 
-[36 - RBAC](labs/35-RBAC/README.md) 
-
-[37 - Operator framework](labs/37-Operator_framework/README.md) 
-
-[38 - Node drain and PodDisruptionBudget](labs/38-Node_drain_and_PodDisruptionBudget/README.md) 
 
 
 
