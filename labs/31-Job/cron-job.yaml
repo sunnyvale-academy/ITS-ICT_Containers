@@ -12,6 +12,7 @@ spec:
   # │ │ │ │ │
   # │ │ │ │ │
   # * * * * * <command to execute>
+  #schedule: "30 12 * * 6"
   schedule: "*/1 * * * *"
   jobTemplate:
     spec:
