@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-At least 2 worker nodes are needed to run thi lab.
+At least 2 worker nodes are needed to fully run this lab.
 
 ## The PodDisruptionBudget resource
 
