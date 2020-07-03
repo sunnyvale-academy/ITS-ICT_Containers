@@ -1,5 +1,8 @@
 # Node drain and PodDisruptionBudget
 
+## Prerequisites
+
+At least 2 worker nodes are needed to run thi lab.
 
 ## The PodDisruptionBudget resource
 
