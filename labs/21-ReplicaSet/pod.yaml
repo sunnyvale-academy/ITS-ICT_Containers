@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: guestbook
+    env: dev
+  name: frontend-prova
+spec:
+  containers:
+  - image: gcr.io/google_samples/gb-frontend:v3
+    imagePullPolicy: IfNotPresent
+    name: php-redis
