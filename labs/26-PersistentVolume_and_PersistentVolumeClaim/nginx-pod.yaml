@@ -18,7 +18,7 @@ spec:
   volumes:
     - name: nfsvol
       persistentVolumeClaim:
-        claimName: nfs-pvc 
+        claimName: hostpath-pvc
 
 ---
 apiVersion: v1

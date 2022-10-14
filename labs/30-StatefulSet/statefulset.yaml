@@ -42,7 +42,7 @@ spec:
       name: data
     spec:
       accessModes: [ "ReadWriteMany" ]
-      storageClassName: "hostpath"
+      # storageClassName: "hostpath"
       resources:
         requests:
           storage: 100Mi
