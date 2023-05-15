@@ -1,0 +1,3 @@
+FROM openjdk:21-oraclelinux8
+COPY java/DockerTest.class /
+CMD  java ${JAVA_OPT} DockerTest ${APP_OPT}
