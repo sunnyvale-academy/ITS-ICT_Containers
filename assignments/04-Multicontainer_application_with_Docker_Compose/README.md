@@ -1,4 +1,4 @@
-# Multicontainer application with Docker Compose
+# Multicontainer application with Docker Compose
 
 Compose is a tool for defining and running multi-container Docker applications.
 
