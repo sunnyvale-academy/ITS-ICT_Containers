@@ -1,4 +1,4 @@
-# Multicontainer application with Docker Compose
+# Multicontainer application with Docker Compose
 
 ## Prerequisites
 
