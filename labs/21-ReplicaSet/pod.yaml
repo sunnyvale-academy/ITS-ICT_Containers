@@ -7,6 +7,6 @@ metadata:
   name: frontend-prova
 spec:
   containers:
-  - image: gcr.io/google_samples/gb-frontend:v3
+  - image: nginx
     imagePullPolicy: IfNotPresent
-    name: php-redis
+    name: nginx
