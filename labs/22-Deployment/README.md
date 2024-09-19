@@ -4,10 +4,10 @@ Deployments are intended to replace Replication Controllers.  They provide the s
 
 A deployment is a supervisor for pods, giving you fine-grained control over how and when a new pod version is rolled out as well as rolled back to a previous state.
 
-Let’s create a deployment with a single container based on nginx:1.7.9 image, that supervises two replicas of a pod as well as a replica set:
+Let’s create a deployment with a single container based on nginx:1.26.0 image, that supervises two replicas of a pod as well as a replica set:
 
 ```console
-$ kubectl apply -f nginx1.7.9-deployment.yaml
+$ kubectl apply -f nginx1.26.0-deployment.yaml
 deployment.apps/nginx-deployment created
 ```
 

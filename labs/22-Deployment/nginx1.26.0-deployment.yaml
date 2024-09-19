@@ -4,6 +4,8 @@ metadata:
   name: nginx-deployment
   labels:
     app: nginx
+  #annotations:
+  #  kubernetes.io/change-cause: pluto
 spec:
   replicas: 2
   selector:
