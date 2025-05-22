@@ -27,26 +27,22 @@ lo        Link encap:Local Loopback
           RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
 ```
 
-The busybox container we have just run launches an `ifconfig` command, to prove there is no any other network interface a part from lo (loopback) within the container itself.
+or using Podman:
 
 ```console
-$ docker run \
+$ podman run \
     --rm \
     -it \
     --net none \
     busybox \
     ifconfig
-Unable to find image 'busybox:latest' locally
-latest: Pulling from library/busybox
-7c9d20b9b6cd: Pull complete 
-Digest: sha256:fe301db49df08c384001ed752dff6d52b4305a73a7f608f21528048e8a08b51e
-Status: Downloaded newer image for busybox:latest
 lo        Link encap:Local Loopback  
           inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
           UP LOOPBACK RUNNING  MTU:65536  Metric:1
           RX packets:0 errors:0 dropped:0 overruns:0 frame:0
           TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
-          collisions:0 txqueuelen:1 
+          collisions:0 txqueuelen:1000 
           RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
 ```
 
@@ -54,6 +50,20 @@ And also there is no network connectivity within a none network container
 
 ```console
 $ docker run \
+    --rm \
+    -it \
+    --net none \
+    busybox \
+    ping 8.8.8.8
+PING 8.8.8.8 (8.8.8.8): 56 data bytes
+ping: sendto: Network is unreachable
+```
+
+or using Podman:
+
+```console
+$ podman run \
+    --privileged=true \
     --rm \
     -it \
     --net none \
@@ -112,6 +122,34 @@ lo        Link encap:Local Loopback
           RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
 ```
 
+or using Podman:
+
+```console
+$ podman run \
+    --rm \
+    -it \
+    --net podman \
+    busybox \
+    ifconfig
+eth0      Link encap:Ethernet  HWaddr 72:8F:FE:01:7F:96  
+          inet addr:10.88.0.5  Bcast:10.88.255.255  Mask:255.255.0.0
+          inet6 addr: fe80::708f:feff:fe01:7f96/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:2 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:90 (90.0 B)  TX bytes:132 (132.0 B)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+```
+
 The **eth0** interface is a virtual interface that allows your container to communicate with the outside world, just test it:
 
 ```console
@@ -127,6 +165,19 @@ $ docker run \
 64 bytes from 8.8.8.8: seq=3 ttl=61 time=122.273 ms
 64 bytes from 8.8.8.8: seq=4 ttl=61 time=12.951 ms
 64 bytes from 8.8.8.8: seq=5 ttl=61 time=30.468 ms
+```
+
+or using Podman ():
+
+```console
+$ podman run \       
+    --rm \
+    -it \
+    --net podman \
+    busybox \
+    ping 8.8.8.8
+PING 8.8.8.8 (8.8.8.8): 56 data bytes
+ping: permission denied (are you root?)
 ```
 
 Now, let's create a new bridge network
