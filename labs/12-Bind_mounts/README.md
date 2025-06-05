@@ -14,7 +14,7 @@ Note the `-v` flag used to mount a host's directory with the source code into th
 $ docker run \
     --rm \
     -v $(pwd)/app:/app/ \
-    openjdk:7 javac -cp /app /app/Main.java
+    openjdk:25-ea-17-slim-bookworm javac -cp /app /app/Main.java
 ```
 
 Now, if you list the host's directory content, you will see the Java compiled bytecode.
@@ -32,7 +32,7 @@ We can also run the Java class using the same image, but with a different contai
 $ docker run \
     --rm \
     -v $(pwd)/app:/app/ \
-    openjdk:7 java -cp / app.Main
+    openjdk:25-ea-17-slim-bookworm java -cp / app.Main
 Hello from a Java app!
 ```
 
@@ -50,7 +50,7 @@ To make the bind mount read-only,
 $ docker run \
     --rm \
     --mount type=bind,source=$(pwd)/app,target=/app/,readonly \
-    openjdk:7 java -cp / app.Main
+    openjdk:25-ea-17-slim-bookworm java -cp / app.Main
 Hello from a Java app!
 ```
 

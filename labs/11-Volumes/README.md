@@ -44,7 +44,7 @@ Now start a new **nginx:latest** container, mounting the volume in the path wher
 ```console
 $ docker run -d \
     --name=nginxtest \
-    --mount source=my-vol,destination=/usr/share/nginx/html \
+    --mount type=volume,source=my-vol,destination=/usr/share/nginx/html \
     nginx:latest 
 a52c0d80c11dc8d62f6abfcdb896714aaa05417a4163ce0e210bbcdd22c8657b
 ```
