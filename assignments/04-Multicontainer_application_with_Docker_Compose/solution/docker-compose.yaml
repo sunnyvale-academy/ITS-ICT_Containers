@@ -3,7 +3,7 @@ version: '3.3'
 services:
 
    db:
-     image: mysql:5.7
+     image: mysql:9.3.0
      volumes:
        - db_data:/var/lib/mysql
      restart: always
@@ -16,6 +16,9 @@ services:
        - backend
  
    wordpress:
+     deploy:
+      mode: replicated
+      replicas: 1
      depends_on:
        - db
      image: wordpress:latest
