@@ -13,7 +13,7 @@ Modify the Dockerfile to reflect your name and surname (change <NOME> <COGNOME> 
 Build the Docker image
 
 ```console
-$ docker build -t hello-new-image:1.0 .
+$ docker build -t hello-new-image:1.0 .     <---- The dot specifies the build context (the folder Docker uses). If the Dockerfile is elsewhere, use -f to specify its path.
 Sending build context to Docker daemon  2.048kB
 Step 1/2 : FROM ubuntu:15.04
  ---> d1b55fd07600
