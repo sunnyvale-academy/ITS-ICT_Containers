@@ -62,7 +62,7 @@ $ docker stop container_1
 container_1
 ```
 
-## Mapping ports on host network (!!!This demo works on Linux only!!!)
+## Mapping ports on host network (!!!This demo may not work homogeneously on all OS!!!)
 
 Run a new container based on httpd (Apache webserver) image and attached to the **host** network
 
