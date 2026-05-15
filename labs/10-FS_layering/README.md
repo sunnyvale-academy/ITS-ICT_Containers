@@ -138,7 +138,7 @@ BE AWARE: image layer IDs are randomly defined, in your lab they will be diffete
 
 
 ```console
-$ docker images | grep -E 'REPOSITORY|express'                            
+$ docker images --filter "reference=*express*"                         
 REPOSITORY                                                              TAG                        IMAGE ID            CREATED             SIZE
 extending-expressweb                                                    latest                     89225b48bf26        9 minutes ago       659MB
 expressweb                                                              latest                     05e78621f26f        15 minutes ago      659MB
