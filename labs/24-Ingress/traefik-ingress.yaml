@@ -4,6 +4,7 @@ metadata:
   name: traefik-ingress
   namespace: default
 spec:
+  ingressClassName: nginx
   rules:
   - http:
       paths:
