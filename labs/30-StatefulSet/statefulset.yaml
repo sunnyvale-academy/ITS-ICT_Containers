@@ -2,46 +2,29 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: mehdb
+  name: mongodb
 spec:
   selector:
     matchLabels:
-      app: mehdb
-  serviceName: "mehdb"
+      app: mongodb
+  serviceName: "mongodb"
   replicas: 2
   template:
     metadata:
       labels:
-        app: mehdb
+        app: mongodb
     spec:
       containers:
       - name: shard
-        image: quay.io/mhausenblas/mehdb:0.6
-        ports:
-        - containerPort: 9876
-        env:
-        - name: MEHDB_DATADIR
-          value: "/mehdbdata"
-        livenessProbe:
-          initialDelaySeconds: 2
-          periodSeconds: 10
-          httpGet:
-            path: /status
-            port: 9876
-        readinessProbe:
-          initialDelaySeconds: 15
-          periodSeconds: 30
-          httpGet:
-            path: /status?level=full
-            port: 9876
+        image: mongodb/mongodb-community-server
         volumeMounts:
         - name: data
-          mountPath: /mehdbdata
+          mountPath: /mongodbdata
   volumeClaimTemplates:
   - metadata:
       name: data
     spec:
-      accessModes: [ "ReadWriteMany" ]
+      accessModes: [ "ReadWriteOnce" ]
       # storageClassName: "hostpath"
       resources:
         requests:
